@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>提问</title>
+    <link href="question.css" rel="stylesheet">
+    <style>
+            #title1{
+            font-size: 25px;
+            position: absolute;
+            left: 800px;
+            top: 450px;
+
+        }
+            #clock{
+            margin-top: 30px;
+            font-size: 60px;
+            font-weight: 900;
+            position: absolute;
+            left: 800px;
+            top: 450px;
+
+        }
+    </style>
+  </head>
+
+  <body background="background1.jpg">
+    <script>var flag=1;</script>
+    <p><input type="button" value="更换背景" onclick="change()"></p>
+    <div class="question">
+      <header><span onclick="post()">我要提问</span></header><!--jQuery post() 方法,请求服务器在单击后加载数据--> 
+      <section>
+          <u1 id="postList"></u1>          
+      </section>
+      <div class="post" id="post">   
+        <input class="title" placeholder="请输入标题" id="title" required>
+        问题板块：<select id="sec"><option>请选择板块</option><option>日常生活</option><option>数理化生</option><option>文学园地</option><option>如何做饭</option></select> 
+        <textarea class="content" id="content" required></textarea>
+        <input class="btn" value="发布" type="submit" onclick="postSuccess()" >       
+      </div>
+  </div>
+  <div class="content">
+      <div id="title1">2019年7月10日 星期三</div>
+      <div id="clock"></div>
+    </div>
+    <script type="text/javascript">
+      function time(){
+          var today = new Date();
+          var year=today.getFullYear();
+          var month=today.getMonth()+1;
+          var date=today.getDate();
+          var day=today.getDay();
+          var week={
+            0:"星期日",
+            1:"星期一",
+            2:"星期二",
+            3:"星期三",
+            4:"星期四",
+            5:"星期五",
+            6:"星期六",
+            }
+            document.getElementById("title").innerHTML=year +"年  "+month+"月  "+date+"日  "+week[day];
+            var today=new Date();
+            var hh=today.getHours();
+            var mm=today.getMinutes();
+            var ss=today.getSeconds();
+            document.getElementById("clock").innerHTML=hh +":"+mm +":" +ss;
+            setTimeout(time,1000);
+          }
+          time();
+    </script>
+    <script src="question.js"></script>
+  </body>
+</html>

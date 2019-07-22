@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0; font-family: "Arial", "΢���ź�";}
+/*.question{background-image:url('background1.jpg');}*/
+.post .btn{width: 160px; height: 35px; color: #fff; background: #009966; border: none; font-size: 14px; font-weight: bold; text-align: center; line-height: 35px; border-radius: 8px; cursor: pointer;}
+header{padding: 5px 0; border-bottom: 1px solid #cecece;}
+header span{display:inline-block; width: 220px; height: 50px; color: #fff; background: #009966; font-size: 18px; font-weight: bold; text-align: center;line-height: 50px; border-radius: 8px; cursor: pointer;}
+.question section ul li{padding: 10px 0; border-bottom: 1px #999999 dashed;
+  overflow: hidden;}
+  .post{position: absolute; background: #ffffff; border: 1px #cccccc solid; width: 500px; left: 65px; top:70px; padding: 10px; font-size: 14px; z-index: 999999; display: none;}/*段落生成内框，不会显示*/

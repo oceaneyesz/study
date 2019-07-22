@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!-- <link href="register.css" rel="stylesheet"> -->
+　　<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+      <form  name="myform" id="myform">
+        <h1 class="bold">注册账户</h1>
+        <dl>
+          <dt>你的Email：</dt>
+          <dd><input id="email" type="text" class="inputs" onblur="checkEmail()" name="user_email" placeholder="邮箱"/></dd>
+          <span id="email1"></span>
+        </dl>
+        <dl>
+          <dt>你的用户名：</dt>
+          <dd><input id="username" type="text" class="inputs" onblur="checkUsername()" name="user_name" placeholder="用户名"/></dd>
+          <span id="username1"></span>
+        </dl>
+        <dl>
+            <dt>你的密码：</dt>
+            <dd><input id="password" type="password" class="password" onblur="checkPassword()" name="user_password" placeholder="密码"/></dd>
+            <span id="password1"></span>
+        </dl>
+        <dl>
+            <dt>再次确认密码：</dt>
+            <dd><input id="repassword" type="password" class="repassword" onblur="checkRepassword()" name="user_repassword" placeholder="确认密码"/></dd>
+            <span id="repassword1"></span>
+        </dl>
+        <button class="register" type="submit" onclick="check()">注册账户</button>
+      </form>
+      <script src="register.js"></script>
+    </body>
+</html>
